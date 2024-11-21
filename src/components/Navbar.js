@@ -10,6 +10,7 @@ import {
 } from '@chakra-ui/react';
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
+import WalletConnect from './WalletConnect';
 
 const NavLink = ({ children, to }) => (
   <Button
@@ -70,20 +71,7 @@ function Navbar() {
               <NavLink to="/tokenomics">Tokenomics</NavLink>
               <NavLink to="/how-to-buy">How to Buy</NavLink>
               <NavLink to="/roadmap">Roadmap</NavLink>
-              <Button
-                variant="solid"
-                bg="accent.yellow"
-                color="black"
-                borderWidth="2px"
-                borderColor="black"
-                boxShadow="4px 4px 0 0 #000"
-                _hover={{
-                  transform: 'translate(-2px, -2px)',
-                  boxShadow: '6px 6px 0 0 #000',
-                }}
-              >
-                Connect Wallet
-              </Button>
+              <WalletConnect />
             </Stack>
           </Flex>
 
@@ -115,20 +103,7 @@ function Navbar() {
               <NavLink to="/tokenomics">Tokenomics</NavLink>
               <NavLink to="/how-to-buy">How to Buy</NavLink>
               <NavLink to="/roadmap">Roadmap</NavLink>
-              <Button
-                variant="solid"
-                bg="accent.yellow"
-                color="black"
-                borderWidth="2px"
-                borderColor="black"
-                boxShadow="4px 4px 0 0 #000"
-                _hover={{
-                  transform: 'translate(-2px, -2px)',
-                  boxShadow: '6px 6px 0 0 #000',
-                }}
-              >
-                Connect Wallet
-              </Button>
+              <WalletConnect />
             </Stack>
           </Box>
         )}
