@@ -7,8 +7,6 @@ import {
   Button,
   Stack,
   Grid,
-  GridItem,
-  useColorModeValue,
 } from '@chakra-ui/react';
 
 const FeatureCard = ({ title, description }) => (
