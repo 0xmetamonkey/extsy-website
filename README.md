@@ -2,6 +2,16 @@
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+# EXTSY Token Website
+
+Experience Time System (EXTSY) - A decentralized protocol transforming time into a digital asset.
+
+## Features
+- Volunteer time logging
+- Community aid requests
+- Real-time reward tracking
+- Web3 integration
+
 ## Available Scripts
 
 In the project directory, you can run:
