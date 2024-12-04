@@ -11,6 +11,15 @@ import {
 import { HamburgerIcon, CloseIcon } from '@chakra-ui/icons';
 import { Link as RouterLink } from 'react-router-dom';
 import WalletConnect from './WalletConnect';
+import Logo from './Logo';
+
+const NAV_ITEMS = [
+  { label: 'Home', href: '/' },
+  { label: 'Tokenomics', href: '/tokenomics' },
+  { label: 'How to Buy', href: '/how-to-buy' },
+  { label: 'Roadmap', href: '/roadmap' },
+  { label: 'Rewards', href: '/rewards' },
+];
 
 const NavLink = ({ children, to }) => (
   <Button
@@ -49,28 +58,21 @@ function Navbar() {
           align={'center'}
           justify={'space-between'}
         >
-          <Button
+          <Box
             as={RouterLink}
             to="/"
-            variant="ghost"
-            fontSize="2xl"
-            fontWeight="black"
-            letterSpacing="-0.02em"
-            color="accent.pink"
-            _hover={{
-              textDecoration: 'none',
-              transform: 'translate(-2px, -2px)',
-              boxShadow: '4px 4px 0 0 #000',
-            }}
+            _hover={{ textDecoration: 'none' }}
           >
-            EXTSY
-          </Button>
+            <Logo size="32px" />
+          </Box>
 
           <Flex display={{ base: 'none', md: 'flex' }}>
             <Stack direction={'row'} spacing={4}>
-              <NavLink to="/tokenomics">Tokenomics</NavLink>
-              <NavLink to="/how-to-buy">How to Buy</NavLink>
-              <NavLink to="/roadmap">Roadmap</NavLink>
+              {NAV_ITEMS.map((navItem) => (
+                <NavLink key={navItem.href} to={navItem.href}>
+                  {navItem.label}
+                </NavLink>
+              ))}
               <WalletConnect />
             </Stack>
           </Flex>
@@ -100,9 +102,11 @@ function Navbar() {
             boxShadow="4px 4px 0 0 #000"
           >
             <Stack spacing={4}>
-              <NavLink to="/tokenomics">Tokenomics</NavLink>
-              <NavLink to="/how-to-buy">How to Buy</NavLink>
-              <NavLink to="/roadmap">Roadmap</NavLink>
+              {NAV_ITEMS.map((navItem) => (
+                <NavLink key={navItem.href} to={navItem.href}>
+                  {navItem.label}
+                </NavLink>
+              ))}
               <WalletConnect />
             </Stack>
           </Box>
